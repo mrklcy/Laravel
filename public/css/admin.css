@@ -1,0 +1,355 @@
+/* RESET */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f6f8f7;
+  color: #1f2937;
+}
+
+/* CLSU COLORS */
+:root{
+  --clsu-green: #009639;
+  --clsu-green-dark: #1E6031;
+  /* Only CLSU green palette allowed: derive lighter/darker tints from the primary */
+  --clsu-green-100: #e6f6ec;
+  --clsu-green-200: #cceedd;
+  --clsu-green-300: #99ddbb;
+  --clsu-green-400: #33b779;
+  --clsu-green-500: #009639;
+  --clsu-green-600: #0b7f4f;
+  --clsu-green-700: #1E6031;
+
+  --border: #e5e7eb;
+  --muted: #6b7280;
+}
+
+/* LAYOUT */
+.admin-shell{
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width: 280px;
+  background: #ffffff;
+  border-right: 4px solid var(--clsu-green-500);
+  padding: 16px;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--clsu-green-100);
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.brand-badge{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--clsu-green-500);
+  color: #fff;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-title{
+  font-weight: 800;
+}
+
+.brand-sub{
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* NAV */
+.nav{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #111827;
+}
+
+.nav-link:hover{
+  background: var(--clsu-green-100);
+}
+
+.nav-link.active{
+  background: var(--clsu-green-500);
+  color: white;
+  font-weight: 700;
+}
+
+.dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--clsu-green-400);
+}
+
+/* MAIN */
+.main{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOPBAR */
+.topbar{
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-btn{
+  width: 42px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: white;
+  cursor: pointer;
+}
+
+.icon-btn:hover{
+  background: #f3f4f6;
+}
+
+.crumb{
+  color: var(--muted);
+}
+
+/* RIGHT */
+.topbar-right{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pill{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--clsu-green-100);
+  color: var(--clsu-green-700);
+  font-size: 13px;
+  border: 1px solid var(--clsu-green-200);
+}
+
+.pill-dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--clsu-green-500);
+}
+
+.userbox{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  border-radius: 14px;
+}
+
+.avatar{
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--clsu-green-600);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+/* CONTENT */
+.content{
+  padding: 20px;
+  background: #f9fafb;
+  flex: 1;
+}
+
+/* PAGE HEAD */
+.page-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.page-title{
+  margin: 0;
+  font-size: 22px;
+}
+
+.page-subtitle{
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* BUTTONS */
+.actions{
+  display: flex;
+  gap: 10px;
+}
+
+.btn{
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover{
+  background: #f3f4f6;
+}
+
+.btn-gold{
+  background: var(--clsu-green-500);
+  border-color: var(--clsu-green-500);
+  color: #fff;
+}
+
+.btn-outline{
+  border-color: var(--clsu-green-500);
+  color: var(--clsu-green-700);
+}
+
+/* CARDS */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+
+.card{
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--clsu-green-500);
+}
+
+.card-title{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.card-value{
+  font-size: 28px;
+  font-weight: 900;
+  margin-top: 6px;
+  color: var(--clsu-green-700);
+}
+
+.card-foot{
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* PANEL */
+.panel{
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.panel-head{
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-title{
+  font-size: 18px;
+  margin: 0;
+}
+
+/* TABLE */
+.table{
+  padding: 12px 16px;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: 180px 1fr 140px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.row.head{
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.row:last-child{
+  border-bottom: none;
+}
+
+/* BADGES */
+.badge{
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.badge.ok{
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.warn{
+  background: var(--clsu-green-100);
+  color: var(--clsu-green-700);
+}
+
+/* FOOTER */
+.footer{
+  padding: 12px 18px;
+  background: #ffffff;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px){
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px){
+  .grid{ grid-template-columns: 1fr; }
+  .sidebar{ display: none; }
+}
